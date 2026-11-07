@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "description": "Shows the DeepSeek account balance as a pill in the DSH web UI.",
+  "homepage": "https://github.com/yulinxie/dsh-plugin-balance",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yulinxie/dsh-plugin-balance.git"
+  },
   "engines": {
     "dsh": ">=0.2.0-rc.1 <0.3.0"
   },
