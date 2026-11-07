@@ -6,7 +6,27 @@
 - 客户端：把 Pill 注册进 `shell.overlay` 插槽，每 60 秒轮询一次
 - 失败时静默：取不到数据就不渲染，不会在界面上留下报错
 
-## 安装到另一台电脑
+## 直接从 GitHub 安装
+
+仓库：<https://github.com/yulinxie/dsh-plugin-balance>
+
+桌面版：侧边栏 → **插件** → 安装，填
+
+```
+git+https://github.com/yulinxie/dsh-plugin-balance.git
+```
+
+`web` / `headless` profile：
+
+```sh
+dsh plugin --profile web add git+https://github.com/yulinxie/dsh-plugin-balance.git
+```
+
+市场索引里则写成固定 commit 的形式（`git+…git#<40 位 sha>`），保证装到的内容不会随分支漂移。装 git 源需要目标机器有 `git` 且能访问 GitHub。
+
+> 注意：这个包名在 npm 上已被别人占用（`dsh-plugin-balance@1.4.4`，另一个额度悬浮窗）。所以只能从本仓库（git）安装，**不要** `pnpm add dsh-plugin-balance`。
+
+## 安装到另一台电脑（离线 tarball）
 
 前提：目标机器已安装 **DSH 桌面版或 Web 版，且登录了 DeepSeek 账号**（`deepseekAccount` 服务由宿主提供）。
 
